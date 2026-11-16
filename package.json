@@ -1,0 +1,14 @@
+{
+  "name": "projeto-observabilidade",
+  "version": "1.0.0",
+  "description": "Projeto acadêmico de observabilidade com Grafana Cloud",
+  "main": "src/server.js",
+  "scripts": {
+  "start": "node --env-file=.env.app --require @opentelemetry/auto-instrumentations-node/register src/server.js",
+  "dev": "node --env-file=.env.app --require @opentelemetry/auto-instrumentations-node/register --watch src/server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "@opentelemetry/auto-instrumentations-node": "*"
+  }
+}
